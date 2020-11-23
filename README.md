@@ -50,4 +50,3 @@ Require full ROS installation. The installation assumes you have Ubuntu 16.04 LT
    
 ## Calibration:
 https://github.com/jhu-lcsr/aruco_hand_eye <br/>
-https://blog.csdn.net/qq_39367282/article/details/89515338?fbclid=IwAR0X1oSc6uy8wauFOOVeNuvXCrIlqtXAn5vyoJm6peQoXf0zKQ3FVYm6eX0
