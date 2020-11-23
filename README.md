@@ -34,21 +34,13 @@ Require full ROS installation. The installation assumes you have Ubuntu 16.04 LT
    ```bash
    $ rostopic pub /votegrasp/width std_msgs/Float64 0.03
    ```
-## On detection side ([code](https://github.com/votegrasp/simulation_grasping/tree/master/franka_vision_manipulation))
-#### To start grasp detection:
-   ```bash
-   $ roslaunch grasp_detection grasp_detection.launch
-   ```
+## On remote side ([code](https://github.com/votegrasp/simulation_grasping/tree/master/franka_vision_manipulation))
 #### To subcribe topic "/votegrasp/grasp" for a grasp configuration, plan grasping by graspit, and publish topic "/votegrasp/width" to close gripper
    ```bash
    $ roslaunch move_franka execute_grasp.launch
    ```
-#### To start planning for a grasp:
+#### To test planning for a grasp:
    ```bash
-   $ rosrun grasp_detection execute_grasp_node
-   ```
-   ```bash
-   To test this node, run:
    $ rostopic pub /votegrasp/grasp std_msgs/Float64MultiArray """
     layout:
         dim: []                                
