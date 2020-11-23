@@ -8,7 +8,7 @@ Require full ROS installation. The installation assumes you have Ubuntu 16.04 LT
 
 ![robotlab](docs/robotlab.jpg)
 
-## On robot side (Franka robot and computer in Robotlab)
+## On robot side (Franka robot and computer in RobotLab)
 #### To build
    ```bash
    $ catkin_make -DFranka_DIR=/home/frankanuc03/libfranka/build
