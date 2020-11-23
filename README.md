@@ -9,41 +9,41 @@ Require full ROS installation. The installation assumes you have Ubuntu 16.04 LT
 ![robotlab](docs/robotlab.jpg)
 
 ## On robot side (Franka robot and computer in Robotlab)
-### To build
+#### To build
    ```bash
    $ catkin_make -DFranka_DIR=/home/frankanuc03/libfranka/build
    ```
    
-### To move to initial pose
+#### To move to initial pose
 ```bash
    $ roslaunch franka_tminplan joint_point_to_point_motion_my.launch
  ```
-### To start planning using MoveIt!
+#### To start planning using MoveIt!
 ```bash
    $ roslaunch panda_table_launch panda_moveit_interface.launch
    ```
-### To make the gripper ready
+#### To make the gripper ready
    ```bash
    $ roslaunch franka_gripper franka_gripper.launch robot_ip:=172.16.0.103
    ```
-## To subscribe "/votegrasp/width" topic and publish a grasp configuration
+#### To subscribe "/votegrasp/width" topic and publish a grasp configuration
    ```bash
    $ roslaunch franka_tminplan test_grasp_node.launch
    ```
-## To publish a topic "/votegrasp/width" (Just for initial test)
+#### To publish a topic "/votegrasp/width" (Just for initial test)
    ```bash
    $ rostopic pub /votegrasp/width std_msgs/Float64 0.03
    ```
 ## On detection side ([code](https://github.com/votegrasp/simulation_grasping/tree/master/franka_vision_manipulation))
-### To start grasp detection:
+#### To start grasp detection:
    ```bash
    $ roslaunch grasp_detection grasp_detection.launch
    ```
-### To subcribe topic "/votegrasp/grasp" for a grasp configuration, plan grasping by graspit, and publish topic "/votegrasp/width" to close gripper
+#### To subcribe topic "/votegrasp/grasp" for a grasp configuration, plan grasping by graspit, and publish topic "/votegrasp/width" to close gripper
    ```bash
    $ roslaunch move_franka execute_grasp.launch
    ```
-### To start planning for a grasp:
+#### To start planning for a grasp:
    ```bash
    $ rosrun grasp_detection execute_grasp_node
    ```
